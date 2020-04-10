@@ -13,14 +13,14 @@ public class ClientService {
     @Autowired
     ClientRepository clientRepository;
 
-    public List<Client> getUsers() { return clientRepository.findAll(); }
-    public Client getUserByEmail (String email) { return clientRepository.findByEmail(email); }
-    public Client getUserById (int id) { return clientRepository.findById(id).orElse(null); }
+    public List<Client> findClientss() { return clientRepository.findAll(); }
+    public Client findClientByEmail (String email) { return clientRepository.findByEmail(email); }
+    public Client findClientById (int id) { return clientRepository.findById(id).orElse(null); }
 
-    public String deleteById (int id) { clientRepository.deleteById(id); return " User removed !!"+id; }
+    public String removeById (int id) { clientRepository.deleteById(id); return " User removed !!"+id; }
 
     public Client saveClient (Client client) { return clientRepository.save(client); }
-    public List<Client> saveClient(List<Client> clients) { return clientRepository.saveAll(clients); }
+    public List<Client> saveClients (List<Client> clients) { return clientRepository.saveAll(clients); }
 
     public Client updateClient(Client client) {
         Client clientUpdate = clientRepository.findById(client.getClientId()).orElse(null);
