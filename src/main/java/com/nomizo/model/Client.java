@@ -17,14 +17,14 @@ public class Client {
     private int clientId;
     private String firstName;
     private String lastName;
-    private Sex sex;
+    private char sex;
     private String email;
     private String username;
     private String password;
 
     public Client() { super(); }
 
-    public Client(int clientId, String firstName, String lastName, Sex sex, String email, String username, String password) {
+    public Client(int clientId, String firstName, String lastName, char sex, String email, String username, String password) {
         this.clientId = clientId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -62,8 +62,8 @@ public class Client {
     public String getLastName() { return lastName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
 
-    public Sex getSex() { return sex; }
-    public void setSex(Sex sex) { this.sex = sex; }
+    public char getSex() { return sex; }
+    public void setSex(char sex) { this.sex = sex; }
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
