@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int clientId;
     private String firstName;
     private String lastName;
