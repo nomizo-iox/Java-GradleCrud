@@ -30,4 +30,10 @@ public class ClientController {
     @PostMapping("/addClients")
     public List<Client> postClients(@RequestBody List<Client> clients) { return clientService.saveClients(clients); }
 
+    @DeleteMapping("/deleteCliet/id/{id}")
+    public String deleteClient(@PathVariable int id) { return clientService.removeById(id); }
+
+    @PutMapping("/client/update/{id}")
+    public Client putClient(@RequestBody Client client) { return clientService.updateClient(client); }
+
 }
